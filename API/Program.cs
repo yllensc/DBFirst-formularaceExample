@@ -35,7 +35,7 @@ using (var scope = app.Services.CreateScope())
     {
         var context = services.GetRequiredService<DbFirstContext>();
         await context.Database.MigrateAsync();
-        /* await ApiContextSeed.SeedAsync(context, loggerFactory); */
+        await DBfirstSeedContext.SeedAsync(context, loggerFactory); 
     }
     catch (Exception ex)
     {

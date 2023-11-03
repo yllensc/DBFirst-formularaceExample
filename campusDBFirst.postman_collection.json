@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "d7ab3a85-dadd-454f-a3df-c9d305fd961d",
+		"name": "campusDBFirst",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22338533"
+	},
+	"item": [
+		{
+			"name": "POSTTeam",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Name\": \"NombreDelEquipo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5070/api/Team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POSTTeamAddDriver",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdDriver\": 2,\r\n    \"IdTeam\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5070/api/Team/addDriver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Team",
+						"addDriver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POSTDriver",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"NombreDelConductor\",\r\n    \"Age\": 34\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5070/api/Team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETTeam",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Version",
+						"value": "1.1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5070/api/Team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETDriver",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Version",
+						"value": "1.1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5070/api/Driver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUTTeam",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"Name\": \"NuevoNombreDelEquipo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5070/api/Team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUTDriver",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"Name\": \"NuevoNombreDelConductor\",\r\n \"Age\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5070/api/Driver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELTeam",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5070/api/Team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELDriver",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5070/api/Driver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5070",
+					"path": [
+						"api",
+						"Driver"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

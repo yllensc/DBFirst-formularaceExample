@@ -56,6 +56,15 @@ namespace API.Controllers;
         teamDto.Id = team.Id;
         return CreatedAtAction(nameof(Post), new {id = teamDto.Id}, teamDto);
     }
+    [HttpPost("addDriver")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> Post([FromBody] AddDriverDto dto)
+    {
+        var result = await unitofwork.Teams.AddDriver(dto.IdTeam, dto.IdDriver);
+       
+        return Ok(result);
+    }
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

@@ -25,4 +25,23 @@ public class TeamRepository : GenericRepository<Team>, ITeam
             .Include(p => p.Drivers)
             .FirstOrDefaultAsync(p => p.Id == id);
     }
+
+    public async Task<string> AddDriver(int idTeam, int idDriver)
+    {
+        var existDriver = await _context.Teams.Where(s=> s.Id == idTeam).FirstAsync();
+        var existTeam =await _context.Drivers.Where(s=> s.Id == idDriver).FirstAsync();
+
+        if(existDriver != null && existTeam != null)
+        {
+            _context.Teamdrivers.Add(new Teamdriver{
+                Idteam = idTeam,
+                IdDriver = idDriver
+            });
+
+            await _context.SaveChangesAsync();  
+            return $"Success. Driver into Team, check";
+        }
+        return "Hey, hey, the driver doesn´t exist";
+
+    }
 }

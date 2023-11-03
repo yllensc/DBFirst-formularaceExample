@@ -1,3 +1,6 @@
+using Core.Interfaces;
+using Infraestructure.UnitOfWork;
+
 namespace API.Extensions;
     public static class ApplicationServiceExtension
     {
@@ -12,6 +15,6 @@ namespace API.Extensions;
 
     public static void AddApplicationServices(this IServiceCollection services)
     {
-        //services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
     }
