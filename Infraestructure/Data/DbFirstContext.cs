@@ -2,7 +2,7 @@
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infraestructure.Entities;
+namespace Infraestructure.Data;
 
 public partial class DbFirstContext : DbContext
 {

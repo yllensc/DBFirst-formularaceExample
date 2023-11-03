@@ -1,6 +1,6 @@
 using System.Reflection;
 using API.Extensions;
-using Infraestructure.Entities;
+using Infraestructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
