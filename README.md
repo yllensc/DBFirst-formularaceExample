@@ -1,8 +1,7 @@
 # DBFirst-formularaceExample
 
-# ClothingStore
-
 ## Comenzando 🚀
+Backend básico con 3 entidades para practicar cómo es la migración con el método DB-First
 ### Pre-requisitos 📋
 
 - .NET 7.0
